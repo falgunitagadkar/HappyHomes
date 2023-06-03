@@ -1,0 +1,26 @@
+#complaint
+{
+    background-color:#3333ff;
+}
+
+#complaint a
+{
+    color:white;
+}
+
+#pending,#resolved
+{
+    border:1px solid black;
+}
+#logout
+{
+    
+    height: 30px;
+    width:80px;
+    margin-left:70%;
+    margin-top:1%;
+    background-color:white;
+    border-radius:7px;
+    font-size: 15px;
+    color:#3333ff;
+}

@@ -1,0 +1,67 @@
+/* for LOGIN */
+#heading 
+{
+    font-size:2em;
+    text-align: center;
+}
+
+
+/* for the entire LOGIN BOX */
+#loginBox
+{
+    float:left;
+    font-size: 18px;
+    border-radius: 10px;
+    height:fit-content;
+    width:380px;
+    background-color:#494949;
+    color:white;
+    margin-top:100px;
+    margin-left:8%;
+    padding:20px;
+}
+#houseImg
+{
+    align-items: center;
+    float:left;
+    margin-left:150px;
+    margin-top:30px;
+}
+#words
+{
+    width:300px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:#3333ff;
+}
+img{
+    width: 450px;
+    height:450px;
+    padding-top:40px;
+    padding-right:60px;
+
+}
+
+#unameDiv,#pwdDiv,#roleDiv,#socNameDiv
+{
+    margin:20px;
+}
+
+#login,#signup
+{
+    height: 40px;
+    width:100px;
+    margin:20px;
+    margin-top:0px;
+    background-color:#3333ff;
+    border-radius:7px;
+    font-size: 15px;
+    color:black;
+}
+
+
+
+
+
+
+
+

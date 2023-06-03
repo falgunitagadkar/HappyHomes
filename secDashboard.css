@@ -1,0 +1,46 @@
+#dashboard
+{
+    background-color:#3333ff;
+}
+#dashboard a
+{
+    color:white;
+}
+
+.flat
+{
+    float:left;
+    height:400px;
+    width:250px;
+    margin:30px 30px;
+}
+
+.buildingImage
+{
+    height:300px;
+    width:200px;
+}
+
+h1{
+    margin-left:50px;
+    margin-top:0px;
+    color:#3333ff;
+}
+
+#rightMenu
+{
+    margin-left:20px;
+
+}
+#logout
+{
+    
+    height: 30px;
+    width:80px;
+    margin-left:70%;
+    margin-top:1%;
+    background-color:white;
+    border-radius:7px;
+    font-size: 15px;
+    color:#3333ff;
+}
