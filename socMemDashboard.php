@@ -8,21 +8,54 @@
     <link rel="stylesheet" href="header.css">
     <link rel="stylesheet" href="leftMenuSM.css">
     <link rel="stylesheet" href="socMemDashboard.css">
+    <style>
 
+        #header
+        {
+        background-color:midnightblue;
+        height:60px;
+        width:100vw;
+        position:absolute;
+        top:0px;
+        left:0px;
+        }
+        #sms a
+        {
+            display:block;
+            float:left;
+            color:white;
+            text-decoration-line:none;
+            text-align:center;
+            padding:1%;
+            font-size:2em;
+            font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+        #sms a
+        {
+            display:block;
+            float:left;
+            color:white;
+            text-decoration-line:none;
+            text-align:center;
+            padding:1%;
+            font-size:2em;
+            font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+        #logo{
+            mix-blend-mode:multiply;
+            height:60px;
+            width:80px;
+            margin-top:0px;
+            float:left;
+            margin:0px;
+            padding:0px;
+
+        }
+    </style>
 </head>
 <body>
-    <div id="header">  
-        <div id="sms"><a href="index.html">Society Management System</a></div>
-        <div id="menu">
-            <a href="index.html"><button id="logout">Logout</button></a>
-            <ul type="none">
-                        <li><a href="index.html">Home </a></li>&nbsp;&nbsp;
-                        <li><a href="contact.html">Contact </a></li>&nbsp;&nbsp;
-                        <li><a href="about.html">About</a></li>
-            </ul>
-        </div>
-     </div>
 
+    <?php include("header.php");?>
      <div id="Menu">
      <div id="leftMenu">
                 <table>

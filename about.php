@@ -24,10 +24,6 @@
             margin:50px 150px;
             font-size:20px;
         }
-        #menu 
-        {
-            margin-top:2%;
-        }
 
         #points li
         {
@@ -37,10 +33,37 @@
         {
             font-weight: bold;
         }
+
+        #header
+        {
+        background-color:midnightblue;
+        height:60px;
+        width:100vw;
+        position:absolute;
+        top:0px;
+        left:0px;
+        }
+        #sms a
+        {
+            padding:1%;
+            font-size:2em;
+
+        }
+        #logo{
+            mix-blend-mode:multiply;
+            height:60px;
+            width:80px;
+            margin-top:0px;
+            float:left;
+            margin:0px;
+            padding:0px;
+
+        }
     </style>
 </head>
 <body>
-    <div id="header">  
+    <div id="header"> 
+        <img id="logo" src="assets/logo.png"/> 
         <div id="sms"><a href="index.html">Society Management System</a></div>
         <div id="menu"><ul type="none">
                         <li><a href="index.html">Home </a></li>&nbsp;&nbsp;
@@ -79,6 +102,6 @@
                             
                         </div>
                     </div>
-                    
-                </body>
-                </html>
+                <?php include("footer.php");?>   
+     </body>          
+      </html>

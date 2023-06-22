@@ -5,15 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="signup.css">
     <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="signup.css">
     <style>
-        #menu
+        #logo{
+            mix-blend-mode:multiply;
+            height:60px;
+            width:80px;
+            margin-top:0px;
+            float:left;
+            margin:0px;
+            padding:0px;
+
+        }
+        #form{
+            height:70%;
+            margin-bottom:5%;
+        }
+        #submitButton
         {
-            margin-top:2%;
+            background-color:midnightblue;
+            border-radius:7px;
+            color:white;
         }
     </style>
-
     <script>
         function checkPwd()
         {
@@ -27,12 +42,11 @@
             }
         }
     </script>
-
-
 </head>
 <body>    
-    <div id="header">  
-        <div id="sms"><a href="index.html">Society Management System</a></div>
+    <div id="header" style="background-color:midnightblue; height:60px;">
+        <img id="logo" src="assets/logo.png"/>  
+        <div id="sms"><a href="index.html" style="padding:1%; font-size:2em">Society Management System</a></div>
         <div id="menu"><ul type="none">
                         <li><a href="index.html">Home </a></li>&nbsp;&nbsp;
                         <li><a href="contact.html">Contact </a></li>&nbsp;&nbsp;
@@ -41,7 +55,6 @@
      </div>
 
     <div id="form">
-        
         <form action="http://localhost/de/index.php" method="post">
             <h1>Enter your details!</h1>
             <div class="field">
@@ -82,5 +95,6 @@
             </div>
         </form>
     </div>
+    <?php include("footer.php");?>
 </body>
 </html>
