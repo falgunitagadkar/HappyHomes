@@ -1,0 +1,56 @@
+
+.field>topic
+{
+    margin-left:10px;
+    margin-top:50px;
+    margin-bottom:10px;
+    height:80px;
+    width:400px;
+    font-size:80px;
+    color:#3333ff;
+    border-bottom:1px solid black;
+}
+#complaint
+{
+    background-color:#3333ff;
+}
+
+#problem
+{
+    height:300px;
+    width:100%;
+    border-top:1px solid black;
+    /* border-bottom:1px solid black; */
+}
+
+#complaint a{
+    color:white;
+}
+
+textarea{
+    font-size:20px;
+}
+
+#submit,#reset
+{
+    height: 40px;
+    width:100px;
+    margin:20px;
+    margin-top:0px;
+    background-color:#3333ff;
+    border-radius:7px;
+    font-size: 15px;
+    color:white;
+}
+#logout
+{
+    
+    height: 30px;
+    width:80px;
+    margin-left:70%;
+    margin-top:1%;
+    background-color:white;
+    border-radius:7px;
+    font-size: 15px;
+    color:#3333ff;
+}
