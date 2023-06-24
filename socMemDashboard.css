@@ -12,7 +12,7 @@
 {
     float:left;
     font-size:30px;
-    margin-top:80px;
+    margin-top:70px;
 }
 
 #rightMenu #memberDetails
@@ -22,7 +22,6 @@
 
 #memberDetails li{
     display:block;
-    height:40px;
     width:100%;
     background-color:lightgrey;
     margin:10px 0px;
@@ -47,26 +46,6 @@
     text-align:center;
 }
 
-#dashboard
-{
-    background-color:#3333ff;
-}
-#dashboard a{
-    color:white;
-}
-
-#logout
-{
-    
-    height: 30px;
-    width:80px;
-    margin-left:70%;
-    margin-top:1%;
-    background-color:white;
-    border-radius:7px;
-    font-size: 15px;
-    color:#3333ff;
-}
 
 
 

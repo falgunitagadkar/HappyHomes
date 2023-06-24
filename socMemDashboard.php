@@ -21,25 +21,9 @@
         }
         #sms a
         {
-            display:block;
-            float:left;
-            color:white;
-            text-decoration-line:none;
-            text-align:center;
             padding:1%;
             font-size:2em;
-            font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-        }
-        #sms a
-        {
-            display:block;
-            float:left;
-            color:white;
-            text-decoration-line:none;
-            text-align:center;
-            padding:1%;
-            font-size:2em;
-            font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            
         }
         #logo{
             mix-blend-mode:multiply;
@@ -51,17 +35,32 @@
             padding:0px;
 
         }
+        #leftMenu
+        {
+            margin-top:60px;
+        }
+        #dashboard
+        {
+            background-color:midnightblue;
+        }
+        #dashboard a{
+            color:white;
+        }
+        #memberDetails li
+        {
+            height:30px;
+        }
     </style>
 </head>
 <body>
 
     <?php include("header.php");?>
-     <div id="Menu">
+     <div id="content">
      <div id="leftMenu">
                 <table>
-                    <tr><td class="listItems" id="dashboard"><a href="socMemDashboard.html">Your Profile</a></td></tr>
-                    <tr><td class="listItems" id="complaint"><a href="socMemFileComplaint.html">Register Complaint</a></td></tr>
-                    <tr><td class="listItems" id="meetings"><a href="meetings.html">Meetings/Notices</a></td></tr>
+                    <tr><td class="listItems" id="dashboard"><a href="socMemDashboard.php">Your Profile</a></td></tr>
+                    <tr><td class="listItems" id="complaint"><a href="socMemFileComplaint.php">Register Complaint</a></td></tr>
+                    <tr><td class="listItems" id="meetings"><a href="meetings.php">Meetings/Notices</a></td></tr>
                 </table>
     </div>
     <div id="rightMenu">
@@ -79,6 +78,6 @@
         </div>
     </div>
     </div>
-    
+    <?php include("footer.php");?>
 </body>
 </html>

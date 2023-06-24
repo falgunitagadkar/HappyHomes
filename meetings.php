@@ -15,7 +15,7 @@
             var n=document.getElementById("notice");
             var m=document.getElementById("meet");
             n.setAttribute("style","color:black; background-color:none");
-            m.setAttribute("style","background-color:#3333ff; color:white");
+            m.setAttribute("style","background-color:midnightblue; color:white");
 
             var c=document.getElementById("content");
             var t=document.createElement("table");
@@ -31,14 +31,14 @@
             var n=document.getElementById("notice");
             var m=document.getElementById("meet");
             m.setAttribute("style","color:black; background-color:none");
-            n.setAttribute("style","background-color:#3333ff; color:white");
+            n.setAttribute("style","background-color:midnightblue; color:white");
 
             
             var c=document.getElementById("content");
             var t=document.createElement("table");
             var temp=document.getElementById("meetingsTable");
             t.innerHTML="<tr><td><h1>NOTICE</h1></br>Topic:Meeting for Parking Management</br></br>This is the notice to inform all society members regarding the meeting that has been held on 17/1/2023 on discussing about the parking issues.<br><br>Venue:Society Club<br>Timings:8:30pm-9:00pm</td></tr>";
-            t.setAttribute("style","border:1px solid black; border:collapse; font-size:18px");
+            t.setAttribute("style","border:none; font-size:18px");
             t.setAttribute("id","noticeBoard");
 
             c.replaceChild(t,temp);
@@ -46,26 +46,56 @@
 
 
     </script>
+    <style>
+        #header
+        {
+            background-color:midnightblue;
+            height:60px;
+            
+        }
+        #sms a
+        {
+            padding:1%;
+            font-size:2em;
+            
+        }
+        #logo{
+            mix-blend-mode:multiply;
+            height:60px;
+            width:80px;
+            margin-top:0px;
+            float:left;
+            margin:0px;
+            padding:0px;
+
+        }
+        #leftMenu
+        {
+            margin-top:60px;
+            width:17%;
+        }
+        #meetings
+        {
+            background-color:midnightblue;
+        }
+        #meetings a{
+            color:white;
+        }
+        #rightMenu
+        {
+            margin-top:60px;
+        }
+    
+    </style>
 </head>
 <body>
-    <div id="header">  
-        <div id="sms"><a href="index.html">Society Management System</a></div>
-        <div id="menu">
-            <a href="index.html"><button id="logout">Logout</button></a>
-            <ul type="none">
-                        <li><a href="index.html">Home </a></li>&nbsp;&nbsp;
-                        <li><a href="contact.html">Contact </a></li>&nbsp;&nbsp;
-                        <li><a href="about.html">About</a></li>
-        </ul></div>
-    </div>
-
-    
+    <?php include("header.php");?>
     <div id="Menu">
         <div id="leftMenu">
            <table>
-               <tr><td class="listItems" id="dashboard"><a href="socMemDashboard.html">Your Profile</a></td></tr>
-               <tr><td class="listItems" id="complaint"><a href="socMemFileComplaint.html">Register Complaint</a></td></tr>
-               <tr><td class="listItems" id="meetings"><a href="meetings.html">Meetings/Notices</a></td></tr>
+               <tr><td class="listItems" id="dashboard"><a href="socMemDashboard.php">Your Profile</a></td></tr>
+               <tr><td class="listItems" id="complaint"><a href="socMemFileComplaint.php">Register Complaint</a></td></tr>
+               <tr><td class="listItems" id="meetings"><a href="meetings.php">Meetings/Notices</a></td></tr>
            </table>
        </div>
        <div id="rightMenu">
@@ -83,6 +113,6 @@
            </div>
        </div>
        </div>
-    
+       <?php include("footer.php");?>
 </body>
 </html>

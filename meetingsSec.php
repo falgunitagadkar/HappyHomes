@@ -13,7 +13,7 @@
             var n=document.getElementById("notice");
             var m=document.getElementById("meet");
             n.setAttribute("style","color:black; background-color:none");
-            m.setAttribute("style","background-color:#3333ff; color:white");
+            m.setAttribute("style","background-color:midnightblue; color:white");
 
             var c=document.getElementById("content");
             var t=document.createElement("table");
@@ -29,19 +29,17 @@
             var n=document.getElementById("notice");
             var m=document.getElementById("meet");
             m.setAttribute("style","color:black; background-color:none");
-            n.setAttribute("style","background-color:#3333ff; color:white");
+            n.setAttribute("style","background-color:midnightblue; color:white");
 
             var c=document.getElementById("content");
             var temp=document.getElementById("meetingsTable");
             var t=document.createElement("textarea");
-            t.setAttribute("style","border:1px solid black; border:collapse; height:400px; width:100%; font-size:18px;");
+            t.setAttribute("style","border:none; outline:none; height:400px; width:100%; font-size:18px;");
             t.setAttribute("id","noticeBoard");
 
             var s=document.createElement("button");
             s.setAttribute("id","submit");
             
-
-
             c.replaceChild(t,temp);
             c.appendChild(s);
             s.innerText="Post Notice";
@@ -50,9 +48,35 @@
     </script>
 
     <style>
+        #header
+        {
+            background-color:midnightblue;
+            height:60px;
+            
+        }
+        #sms a
+        {
+            padding:1%;
+            font-size:2em;
+            
+        }
+        #logo{
+            mix-blend-mode:multiply;
+            height:60px;
+            width:80px;
+            margin-top:0px;
+            float:left;
+            margin:0px;
+            padding:0px;
+
+        }
+        #leftMenu,#rightMenu
+        {
+            margin-top:60px;
+        }
         #meetings
         {
-            background-color:#3333ff;
+            background-color:midnightblue;
         }
 
         #meetings a
@@ -63,47 +87,25 @@
         {
             font-size:20px;
         }
-
+        /* submit button created to submit the notice in the notice board */
         #submit
         {
             
             height: 40px;
             width:100px;
             margin:20px;
-            margin-top:0px;
-            margin-left:250px;
-            background-color:#3333ff;
+            margin-top:7%;
+            margin-left:400px;
+            background-color:midnightblue;
             border-radius:7px;
             font-size: 15px;
             color:white;
-        }
-        #logout
-        {
-            
-            height: 30px;
-            width:80px;
-            margin-left:70%;
-            margin-top:1%;
-            background-color:white;
-            border-radius:7px;
-            font-size: 15px;
-            color:#3333ff;
         }
     </style>
 
 </head>
 <body>
-    <div id="header">  
-        <div id="sms"><a href="index.html">Society Management System</a></div>
-        <div id="menu">
-            <a href="index.html"><button id="logout">Logout</button></a>
-            <ul type="none">
-                        <li><a href="index.html">Home </a></li>&nbsp;&nbsp;
-                        <li><a href="contact.html">Contact </a></li>&nbsp;&nbsp;
-                        <li><a href="about.html">About</a></li>
-        </ul></div>
-     </div>
-
+     <?php include("header.php");?>
      <div id="Menu">
         <div id="leftMenu">
             <table>
@@ -126,6 +128,6 @@
             <div id="content"></div>
         </div>
      </div>
-
+     <?php include("footer.php");?>
 </body>
 </html>

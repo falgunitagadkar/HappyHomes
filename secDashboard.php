@@ -8,25 +8,55 @@
     <link rel="stylesheet" href="header.css">
     <link rel="stylesheet" href="leftMenuSM.css">
     <link rel="stylesheet" href="secDashboard.css">
+    <style>
+        
+        #header
+        {
+            background-color:midnightblue;
+            height:60px;
+        }
+        #sms a
+        {
+            padding:1%;
+            font-size:2em;
+            
+        }
+        #logo{
+            mix-blend-mode:multiply;
+            height:60px;
+            width:80px;
+            margin-top:0px;
+            float:left;
+            margin:0px;
+            padding:0px;
+
+        }
+        #leftMenu
+        {
+            margin-top:60px;
+        }
+        #dashboard
+        {
+            background-color:midnightblue;
+        }
+        #dashboard a{
+            color:white;
+        }
+        .flat h1
+        {
+            color:midnightblue;
+        }
+    </style>
+
 </head>
 <body>
-    <div id="header">  
-        <div id="sms"><a href="index.html">Society Management System</a></div>
-        <div id="menu">
-            <a href="index.html"><button id="logout">Logout</button></a>
-            <ul type="none">
-                        <li><a href="index.html">Home </a></li>&nbsp;&nbsp;
-                        <li><a href="contact.html">Contact </a></li>&nbsp;&nbsp;
-                        <li><a href="about.html">About</a></li>
-        </ul></div>
-     </div>
-
+    <?php include("header.php");?>
      <div id="Menu">
         <div id="leftMenu">
             <table>
-                <tr><td class="listItems" id="dashboard"><a href="secDashboard.html">Flat Details</a></td></tr>
-                <tr><td class="listItems" id="complaint"><a href="resolveComplaints.html">Resolve Complaints</a></td></tr>
-                <tr><td class="listItems" id="meetings"><a href="meetingsSec.html">Meetings/Notices</a></td></tr>
+                <tr><td class="listItems" id="dashboard"><a href="secDashboard.php">Flat Details</a></td></tr>
+                <tr><td class="listItems" id="complaint"><a href="resolveComplaints.php">Resolve Complaints</a></td></tr>
+                <tr><td class="listItems" id="meetings"><a href="meetingsSec.php">Meetings/Notices</a></td></tr>
             </table>
         </div>
         <div id="rightMenu">
@@ -45,8 +75,8 @@
                 <h1>Flat C</h1>
             </div>
         </div>
-
      </div>
+     <?php include("footer.php");?>
     
 </body>
 </html>
