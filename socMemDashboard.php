@@ -8,49 +8,6 @@
     <link rel="stylesheet" href="header.css">
     <link rel="stylesheet" href="leftMenuSM.css">
     <link rel="stylesheet" href="socMemDashboard.css">
-    <style>
-
-        #header
-        {
-        background-color:midnightblue;
-        height:60px;
-        width:100vw;
-        position:absolute;
-        top:0px;
-        left:0px;
-        }
-        #sms a
-        {
-            padding:1%;
-            font-size:2em;
-            
-        }
-        #logo{
-            mix-blend-mode:multiply;
-            height:60px;
-            width:80px;
-            margin-top:0px;
-            float:left;
-            margin:0px;
-            padding:0px;
-
-        }
-        #leftMenu
-        {
-            margin-top:60px;
-        }
-        #dashboard
-        {
-            background-color:midnightblue;
-        }
-        #dashboard a{
-            color:white;
-        }
-        #memberDetails li
-        {
-            height:30px;
-        }
-    </style>
 </head>
 <body>
 

@@ -8,46 +8,6 @@
     <link rel="stylesheet" href="header.css">
     <link rel="stylesheet" href="leftMenuSM.css">
     <link rel="stylesheet" href="secDashboard.css">
-    <style>
-        
-        #header
-        {
-            background-color:midnightblue;
-            height:60px;
-        }
-        #sms a
-        {
-            padding:1%;
-            font-size:2em;
-            
-        }
-        #logo{
-            mix-blend-mode:multiply;
-            height:60px;
-            width:80px;
-            margin-top:0px;
-            float:left;
-            margin:0px;
-            padding:0px;
-
-        }
-        #leftMenu
-        {
-            margin-top:60px;
-        }
-        #dashboard
-        {
-            background-color:midnightblue;
-        }
-        #dashboard a{
-            color:white;
-        }
-        .flat h1
-        {
-            color:midnightblue;
-        }
-    </style>
-
 </head>
 <body>
     <?php include("header.php");?>
@@ -61,7 +21,7 @@
         </div>
         <div id="rightMenu">
             <div class="flat">
-                <a href="flatA.html"><img class="buildingImage" id="blockA" src="http://localhost/de/assets/buildingNew.png" alt="can't load image"></a>
+                <a href="flatA.php"><img class="buildingImage" id="blockA" src="http://localhost/de/assets/buildingNew.png" alt="can't load image"></a>
                 <h1>Flat A</h1>
             </div>
 

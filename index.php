@@ -72,97 +72,60 @@
             {
                 alert("Username must not be empty");
             }
-        }
-        
+        } 
     </script>
-    <style>
-
-        #header
-        {
-        background-color:midnightblue;
-        height:60px;
-        }
-        #sms a
-        {
-            padding:1%;
-            font-size:2em;
-            
-        }
-        #logo{
-            mix-blend-mode:multiply;
-            height:60px;
-            width:80px;
-            margin-top:0px;
-            float:left;
-            margin:0px;
-            padding:0px;
-
-        }
-        #loginBox
-        {
-            height:80%;
-            width:30%;
-            margin-bottom:5%;
-        }
-        #login,#signup 
-        {
-            background-color:midnightblue;
-            color:white;
-        }
-    </style>
 </head>
 
 <body>
-
-
-<!-- when new user signup he comes here and using php data is inserted in db  -->
-<?php
-    if(isset($_POST['username']))
-    {
-        $server="localhost";
-        $user="root";
-        $password="";
-        $db="db";
-
-        try{
-            $conn=mysqli_connect($server,$user,$password,$db);
-        }
-        catch(Exception $e)
+    <!-- when new user signup he comes here and using php data is inserted in db  -->
+    <?php
+        if(isset($_POST['username']))
         {
-            echo $e;
+            $server="localhost";
+            $user="root";
+            $password="";
+            $db="db";
+
+            try{
+                $conn=mysqli_connect($server,$user,$password,$db);
+            }
+            catch(Exception $e)
+            {
+                echo $e;
+            }
+
+            $uname=$_POST['username'];
+            $contact=$_POST['contactNo'];
+            $email=$_POST['email'];
+            $flat=$_POST['flatNo'];
+            $soc=$_POST['socName'];
+            $pwd=$_POST['createPwd'];
+            $cfpwd=$_POST['confirmPwd'];
+            if($pwd==$cfpwd)
+            {
+                $sql="INSERT INTO userlist(uname,contact,email,flat,soc,pwd,cfpwd) VALUES ('".$uname."',
+                                                    '".$contact."',
+                                                    '".$email."',
+                                                    '".$flat."',
+                                                    '".$soc."',
+                                                    '".$pwd."',
+                                                    '".$cfpwd."')";
+                mysqli_query($conn,$sql);
+
+            }
+            else
+            {
+                echo "<script type='text/javascript'>pwdCheck()</script>";
+            }
+
+            $conn->close();
+
         }
-
-        $uname=$_POST['username'];
-        $contact=$_POST['contactNo'];
-        $email=$_POST['email'];
-        $flat=$_POST['flatNo'];
-        $soc=$_POST['socName'];
-        $pwd=$_POST['createPwd'];
-        $cfpwd=$_POST['confirmPwd'];
-        if($pwd==$cfpwd)
-        {
-            $sql="INSERT INTO userlist(uname,contact,email,flat,soc,pwd,cfpwd) VALUES ('".$uname."',
-                                                '".$contact."',
-                                                '".$email."',
-                                                '".$flat."',
-                                                '".$soc."',
-                                                '".$pwd."',
-                                                '".$cfpwd."')";
-            mysqli_query($conn,$sql);
-
-        }
-        else
-        {
-            echo "<script type='text/javascript'>pwdCheck()</script>";
-        }
-
-        $conn->close();
-
-    }
-?>
+    ?>
+    
     <div id="header"> 
         <img id="logo" src="assets/logo.png"/>
-        <div id="sms"><a href="index.html">Society Management System</a></div>
+        <div id="sms"><a href="index.php">Society Management System</a></div>
         <div id="menu"><ul type="none">
                         <li><a href="index.php">Home </a></li>&nbsp;&nbsp;
                         <li><a href="contact.html">Contact </a></li>&nbsp;&nbsp;

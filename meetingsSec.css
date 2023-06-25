@@ -1,0 +1,31 @@
+#rightMenu
+{
+    margin-top:60px;
+}
+#meetings
+{
+    background-color:midnightblue;
+}
+
+#meetings a
+{
+    color:white;
+}
+#noticeBoard
+{
+    font-size:20px;
+}
+/* submit button created to submit the notice in the notice board */
+#submit
+{
+    
+    height: 40px;
+    width:100px;
+    margin:20px;
+    margin-top:7%;
+    margin-left:400px;
+    background-color:midnightblue;
+    border-radius:7px;
+    font-size: 15px;
+    color:white;
+}

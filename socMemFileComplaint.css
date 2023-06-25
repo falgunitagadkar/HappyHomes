@@ -1,29 +1,16 @@
-
-.field>topic
-{
-    margin-left:10px;
-    margin-top:50px;
-    margin-bottom:10px;
-    height:80px;
-    width:400px;
-    font-size:80px;
-    border-bottom:1px solid black;
-}
 #complaint
 {
-    background-color:#3333ff;
+    background-color:midnightblue;
 }
-
+#complaint a{
+    color:white;
+}
 #problem
 {
     height:300px;
     width:100%;
     border-top:1px solid black;
     /* border-bottom:1px solid black; */
-}
-
-#complaint a{
-    color:white;
 }
 
 textarea{
@@ -34,22 +21,46 @@ textarea{
 {
     height: 40px;
     width:100px;
-    margin:20px;
-    margin-top:0px;
-    background-color:#3333ff;
+    margin-top:6%;
+    margin-left:5%;
+    background-color:midnightblue;
     border-radius:7px;
     font-size: 15px;
     color:white;
 }
-#logout
+#submit
 {
-    
-    height: 30px;
-    width:80px;
-    margin-left:70%;
-    margin-top:1%;
-    background-color:white;
-    border-radius:7px;
-    font-size: 15px;
-    color:#3333ff;
+    margin-left:30%;
+}
+#mess 
+{
+    font-size: 2em; 
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    height:40%;
+    width:100%;
+    color:midnightblue;
+}
+
+#fieldTopic
+{
+    margin-left:10px;
+    margin-top:50px;
+    margin-bottom:10px;
+    height:80px;
+    width:400px;
+    font-size:80px;
+    border-bottom:1px solid black;
+}
+#title 
+{
+    border:none;
+    outline:none;
+    border-bottom:2px solid black;
+    font-size:2em;
+    font-weight:bold;
+}
+#text
+{
+    border:none;
+    outline:none;
 }

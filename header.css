@@ -18,7 +18,16 @@
     font-size:2em;
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
+#logo{
+    mix-blend-mode:multiply;
+    height:60px;
+    width:80px;
+    margin-top:0px;
+    float:left;
+    margin:0px;
+    padding:0px;
 
+}
 #menu 
 {
     float:right;

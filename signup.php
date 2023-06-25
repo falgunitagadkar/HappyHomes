@@ -7,28 +7,6 @@
     <title>Document</title>
     <link rel="stylesheet" href="header.css">
     <link rel="stylesheet" href="signup.css">
-    <style>
-        #logo{
-            mix-blend-mode:multiply;
-            height:60px;
-            width:80px;
-            margin-top:0px;
-            float:left;
-            margin:0px;
-            padding:0px;
-
-        }
-        #form{
-            height:70%;
-            margin-bottom:5%;
-        }
-        #submitButton
-        {
-            background-color:midnightblue;
-            border-radius:7px;
-            color:white;
-        }
-    </style>
     <script>
         function checkPwd()
         {

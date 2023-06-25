@@ -1,4 +1,14 @@
-
+#complaint
+{
+    background-color:midnightblue;
+}
+#complaint a{
+    color:white;
+}
+#rightMenu
+{
+    margin-top:60px;
+}
 #pending,#resolved
 {
     border:1px solid black;

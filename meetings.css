@@ -1,4 +1,14 @@
-
+#meetings
+{
+    background-color:midnightblue;
+}
+#meetings a{
+    color:white;
+}
+#rightMenu
+{
+    margin-top:60px;
+}
 #notice,#meet
 {
     width:50%;
@@ -10,16 +20,5 @@
     width:80vw;
     height:90vh;
 }
-#logout
-{
-    
-    height: 30px;
-    width:80px;
-    margin-left:70%;
-    margin-top:1%;
-    background-color:white;
-    border-radius:7px;
-    font-size: 15px;
-    color:#3333ff;
-}
+
 

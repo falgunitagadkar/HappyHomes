@@ -34,31 +34,6 @@
             font-weight: bold;
         }
 
-        #header
-        {
-        background-color:midnightblue;
-        height:60px;
-        width:100vw;
-        position:absolute;
-        top:0px;
-        left:0px;
-        }
-        #sms a
-        {
-            padding:1%;
-            font-size:2em;
-
-        }
-        #logo{
-            mix-blend-mode:multiply;
-            height:60px;
-            width:80px;
-            margin-top:0px;
-            float:left;
-            margin:0px;
-            padding:0px;
-
-        }
     </style>
 </head>
 <body>

@@ -42,40 +42,6 @@
             c.replaceChild(t,temp);
         }
     </script>
-    <style>
-        #header
-        {
-        background-color:midnightblue;
-        height:60px;
-        }
-        #sms a
-        {
-            padding:1%;
-            font-size:2em;
-            
-        }
-        #logo{
-            mix-blend-mode:multiply;
-            height:60px;
-            width:80px;
-            margin-top:0px;
-            float:left;
-            margin:0px;
-            padding:0px;
-
-        }
-        #leftMenu,#rightMenu
-        {
-            margin-top:60px;
-        }
-        #complaint
-        {
-            background-color:midnightblue;
-        }
-        #complaint a{
-            color:white;
-        }
-    </style>
 </head>
 <body>
      <?php include("header.php");?>

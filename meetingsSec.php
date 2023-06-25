@@ -7,6 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="header.css">
     <link rel="stylesheet" href="leftMenuSM.css">
+    <link rel="stylesheet" href="meetingsSec.css">
     <script>
         function meetings()
         {     
@@ -46,72 +47,15 @@
 
         }
     </script>
-
-    <style>
-        #header
-        {
-            background-color:midnightblue;
-            height:60px;
-            
-        }
-        #sms a
-        {
-            padding:1%;
-            font-size:2em;
-            
-        }
-        #logo{
-            mix-blend-mode:multiply;
-            height:60px;
-            width:80px;
-            margin-top:0px;
-            float:left;
-            margin:0px;
-            padding:0px;
-
-        }
-        #leftMenu,#rightMenu
-        {
-            margin-top:60px;
-        }
-        #meetings
-        {
-            background-color:midnightblue;
-        }
-
-        #meetings a
-        {
-            color:white;
-        }
-        #noticeBoard
-        {
-            font-size:20px;
-        }
-        /* submit button created to submit the notice in the notice board */
-        #submit
-        {
-            
-            height: 40px;
-            width:100px;
-            margin:20px;
-            margin-top:7%;
-            margin-left:400px;
-            background-color:midnightblue;
-            border-radius:7px;
-            font-size: 15px;
-            color:white;
-        }
-    </style>
-
 </head>
 <body>
      <?php include("header.php");?>
      <div id="Menu">
         <div id="leftMenu">
             <table>
-                <tr><td class="listItems" id="dashboard"><a href="secDashboard.html">Flat Details</a></td></tr>
-                <tr><td class="listItems" id="complaint"><a href="resolveComplaints.html">Resolve Complaints</a></td></tr>
-                <tr><td class="listItems" id="meetings"><a href="meetingsSec.html">Meetings/Notices</a></td></tr>
+                <tr><td class="listItems" id="dashboard"><a href="secDashboard.php">Flat Details</a></td></tr>
+                <tr><td class="listItems" id="complaint"><a href="resolveComplaints.php">Resolve Complaints</a></td></tr>
+                <tr><td class="listItems" id="meetings"><a href="meetingsSec.php">Meetings/Notices</a></td></tr>
             </table>
         </div>
         <div id="rightMenu">

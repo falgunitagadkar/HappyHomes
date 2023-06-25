@@ -1,25 +1,15 @@
 #dashboard
 {
-    background-color:#3333ff;
+    background-color:midnightblue;
 }
-
 #dashboard a
 {
     color:white;
 }
-
 th,td{
     font-size:20px;
 }
-#logout
+#rightMenu
 {
-    
-    height: 30px;
-    width:80px;
-    margin-left:70%;
-    margin-top:1%;
-    background-color:white;
-    border-radius:7px;
-    font-size: 15px;
-    color:#3333ff;
+    margin-top:60px;
 }
