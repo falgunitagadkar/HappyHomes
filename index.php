@@ -8,7 +8,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="header.css">
-    <script>
+    <script> 
         function pwdCheck()
         {
             alert("Your password doesn't match with confirm password\nPlease try again!")
@@ -25,37 +25,37 @@
                     var patt=/empty/;
                     if(!patt.test(role))
                     {
-                        if(/SocietyMember/.test(role))
-                        {
+                        // if(/SocietyMember/.test(role))
+                        // {
                             
-                            var f=document.forms[0];
-                            f.setAttribute("action","socMemDashboard.php");
-                        }
-                        else{
-                            var f=document.forms[0];
-                            f.setAttribute("action","secDashboard.php"); 
-                        }
-                        var soc=document.getElementById("socName").value;
-                        var patt2=/Venus\sAppartment|Scarlet\sHeights/;
-                        if(patt2.test(soc))
-                        {
-                            var submitButton=document.createElement("input");
-                            submitButton.setAttribute("type","submit");
-                            submitButton.setAttribute("id","submit");
-                            submitButton.setAttribute("value","Submit");
-                            submitButton.setAttribute("style","height: 40px;width:100px;margin:20px;margin-top:0px;background-color:midnightblue;border-radius:7px;font-size: 15px;color:white;");
-                            var d=document.getElementById("outerSubmit");
-                            var b=document.getElementById("login");
-                            d.replaceChild(submitButton,b);
-                        }
-                        else if(soc=="")
-                        {
-                            alert("Please enter society name");
-                        }
-                        else
-                        {
-                            alert("Sorry!Your society is not yet register with us")
-                        }
+                        //     var f=document.forms[0];
+                        //     f.setAttribute("action","socMemDashboard.php");
+                        // }
+                        // else{
+                        //     var f=document.forms[0];
+                        //     f.setAttribute("action","secDashboard.php"); 
+                        // }
+                            var soc=document.getElementById("socName").value;
+                            var patt2=/Venus\sAppartment|Scarlet\sHeights/;
+                            if(patt2.test(soc))
+                            {
+                                var submitButton=document.createElement("input");
+                                submitButton.setAttribute("type","submit");
+                                submitButton.setAttribute("id","submit");
+                                submitButton.setAttribute("value","Submit");
+                                submitButton.setAttribute("style","height: 40px;width:100px;margin:20px;margin-top:0px;background-color:midnightblue;border-radius:7px;font-size: 15px;color:white;");
+                                var d=document.getElementById("outerSubmit");
+                                var b=document.getElementById("login");
+                                d.replaceChild(submitButton,b);
+                            }
+                            else if(soc=="")
+                            {
+                                alert("Please enter society name");
+                            }
+                            else
+                            {
+                                alert("Sorry!Your society is not yet register with us")
+                            }
                     }
                     else
                     {
@@ -77,52 +77,54 @@
 </head>
 
 <body>
-    <!-- when new user signup he comes here and using php data is inserted in db  -->
     <?php
-        if(isset($_POST['username']))
+        if(isset($_POST['uname']))
         {
-            $server="localhost";
-            $user="root";
-            $password="";
-            $db="db";
+        $server="localhost";
+        $user="root";
+        $password="";
+        $db="db";
 
-            try{
-                $conn=mysqli_connect($server,$user,$password,$db);
-            }
-            catch(Exception $e)
+        try{
+            $conn=mysqli_connect($server,$user,$password,$db);
+            echo "Connection established succesfully";
+        }
+        catch(Exception $e)
+        {
+            echo $e;
+        }
+
+        $uname=$_POST['uname'];
+        $pwd=$_POST['pwd'];
+        $role=$_POST['role'];
+
+        $sql="SELECT * FROM userlist WHERE uname='$uname'";
+        $result=mysqli_query($conn,$sql);
+
+        if(mysqli_num_rows($result)==0)
+        {
+            echo "<script type='text/javascript'>alert('User not registered')</script>";
+        }
+        else
+        {
+            if($role=="SocietyMember")
             {
-                echo $e;
-            }
-
-            $uname=$_POST['username'];
-            $contact=$_POST['contactNo'];
-            $email=$_POST['email'];
-            $flat=$_POST['flatNo'];
-            $soc=$_POST['socName'];
-            $pwd=$_POST['createPwd'];
-            $cfpwd=$_POST['confirmPwd'];
-            if($pwd==$cfpwd)
-            {
-                $sql="INSERT INTO userlist(uname,contact,email,flat,soc,pwd,cfpwd) VALUES ('".$uname."',
-                                                    '".$contact."',
-                                                    '".$email."',
-                                                    '".$flat."',
-                                                    '".$soc."',
-                                                    '".$pwd."',
-                                                    '".$cfpwd."')";
-                mysqli_query($conn,$sql);
-
+                header("Location:socMemDashboard.php");
             }
             else
             {
-                echo "<script type='text/javascript'>pwdCheck()</script>";
+                $code=$_POST['pwd'];
+                if($code=="123456")
+                    header("Location:secDashboard.php");
+                else
+                    echo "<script type='text/javascript'>alert('Sorry!Unique Code for Secretary not matched')</script>";
             }
-
-            $conn->close();
-
         }
+
+        $conn->close();
+
+    }
     ?>
-    
     <div id="header"> 
         <img id="logo" src="assets/logo.png"/>
         <div id="sms"><a href="index.php">Society Management System</a></div>
@@ -135,41 +137,49 @@
     <div>
     <div id="loginBox"> 
         <div id="heading">Login</div>
-        <form>
+        <form action="" method="post">
             <!-- Username -->
-            <div id="unameDiv">
-                <label for="uname">Username:</label>
-                <input id="uname" type="text" name="uname">
-            </div>
+            <table>
+            <tr id="unameDiv">
+               <td> <label for="uname">Username:</label></td>
+                <td><input id="uname" type="text" name="uname"></td>
+            </tr>
             
             <!-- password -->
-            <div id="pwdDiv">
-                <label for="pwd">Password / UniqCode(in case of Secretary):</label>
-                <input id="pwd" type="password" name="pwd">
-            </div>
+            <tr id="pwdDiv">
+                <td><label for="pwd">Password:</label></td>
+                <td><input id="pwd" type="password" name="pwd"></td>
+            </tr>
             
             <!-- Role -->
-            <div id="roleDiv">
-                <label for="role">Role:</label>
+
+            <tr id="roleDiv">
+                <td><label for="role">Role:</label></td>
+                <td>
                 <select id="role" name="role">
                     <option value="empty">--SELECT ROLE--</option>
                     <option value="SocietyMember">Society Member</option>
-                    <option value="Secretary">Secretary</option>
+                    <option value="Secretary">Admin</option>
                 </select>
-            </div>
+            </td>
+            </tr>
             
             <!-- society name  -->
-            <div id="socNameDiv">
-                <label for="socName">Society Name</label>
-                <input id="socName" type="text" name="socName">
-            </div>
+            <tr id="socNameDiv">
+                <td><label for="socName">Society Name</label></td>
+                <td><input id="socName" type="text" name="socName"></td>
+            </td>
+            </tr>
+</table>
             
             <!-- loginSignup buttons  -->
+        
             <div id="loginSignup">
                 <div style="text-align:center;" id="outerSubmit"><input type="button" id="login" value="Submit" onclick="check()"></div>
                 <p style="text-align: center;">OR</p>
                 <div style="text-align: center;">Don't have an account?<a href="signup.php" method="post"><input id="signup" type="button" value="signup"></a></div>
             </div>
+
         </form>
     </div>
     <div id="houseImg"><img src="http://localhost/de/assets/apparrtmentVector3.png">

@@ -5,19 +5,24 @@
     text-align: center;
 }
 
-
+#outerSubmit
+{
+    margin-bottom:0px;
+}
 /* for the entire LOGIN BOX */
 #loginBox
 {
     float:left;
-    font-size: 18px;
+    font-size: 20px;
     border-radius: 10px;
     height:80%;
-    width:30%;
-    background-color:#494949;
-    color:white;
+    width:25%;
+    background-color:rgb(225,225,225);
+    display:flex;
+    flex-wrap: wrap;
+    color:black;
     margin-top:100px;
-    margin-left:8%;
+    margin-left:15%;
     margin-bottom:5%;
     padding:20px;
 }
@@ -55,6 +60,14 @@ img{
     border-radius:7px;
     font-size: 15px;
     color:white;
+}
+tr{
+    height:25%;
+}
+table
+{
+    height:200px;
+    width:100px;
 }
 
 

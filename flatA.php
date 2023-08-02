@@ -14,9 +14,9 @@
      <div id="Menu">
         <div id="leftMenu">
             <table>
-                <tr><td class="listItems" id="dashboard"><a href="secDashboard.html">Flat Details</a></td></tr>
-                <tr><td class="listItems" id="complaint"><a href="resolveComplaints.html">Resolve Complaints</a></td></tr>
-                <tr><td class="listItems" id="meetings"><a href="meetingsSec.html">Meetings/Notices</a></td></tr>
+                <tr><td class="listItems" id="dashboard"><a href="secDashboard.php">Flat Details</a></td></tr>
+                <tr><td class="listItems" id="complaint"><a href="resolveComplaints.php">Resolve Complaints</a></td></tr>
+                <tr><td class="listItems" id="meetings"><a href="meetingsSec.php">Meetings/Notices</a></td></tr>
             </table>
         </div>
         <div id="rightMenu">

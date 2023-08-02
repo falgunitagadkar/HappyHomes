@@ -5,6 +5,23 @@
 #complaint a{
     color:white;
 }
+#rightMenu
+{
+    margin:0px;
+    padding:0px;
+    height:100vh;
+}
+#right
+{
+    margin:auto;
+    margin-top:13%;
+    margin-left:10%;
+    height:70%;
+    width:70%;
+    background-color:rgba(225,225,225);
+    border-radius: 10px;
+}
+
 #problem
 {
     height:300px;
@@ -14,53 +31,35 @@
 }
 
 textarea{
-    font-size:20px;
+    font-size:15px;
 }
 
 #submit,#reset
 {
     height: 40px;
     width:100px;
-    margin-top:6%;
-    margin-left:5%;
+    margin-left:30px;
     background-color:midnightblue;
     border-radius:7px;
     font-size: 15px;
     color:white;
 }
-#submit
-{
-    margin-left:30%;
-}
-#mess 
-{
-    font-size: 2em; 
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    height:40%;
-    width:100%;
-    color:midnightblue;
-}
 
-#fieldTopic
+table
 {
-    margin-left:10px;
-    margin-top:50px;
-    margin-bottom:10px;
-    height:80px;
-    width:400px;
-    font-size:80px;
-    border-bottom:1px solid black;
+    border:none;
 }
-#title 
+#title
 {
     border:none;
     outline:none;
-    border-bottom:2px solid black;
-    font-size:2em;
-    font-weight:bold;
+    font-size:1.5em;
+    width:100%;
+    border-radius:5px;
 }
 #text
 {
     border:none;
     outline:none;
+    border-radius:10px;
 }

@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="socMemFileComplaint.css">
     <link rel="stylesheet" href="header.css">
     <link rel="stylesheet" href="leftMenuSM.css">
+    <link rel="stylesheet" href="socMemFileComplaint.css">
     
     <script>
         function complaint()
@@ -18,62 +18,75 @@
     <style>
         /* @import url("https://fonts.google.com/specimen/Roboto"); */
         
-        #fieldTopic
+        table tr
         {
-            margin-left:10px;
-            margin-top:50px;
-            margin-bottom:10px;
-            height:80px;
-            width:400px;
-            font-size:80px;
-            border-bottom:1px solid black;
+            border-bottom:none;
         }
-        #title 
-        {
-            border:none;
-            outline:none;
-            border-bottom:2px solid black;
-            font-size:2em;
-            font-weight:bold;
-        }
-        #text
-        {
-            border:none;
-            outline:none;
-        }
-        #submit
-        {
-            background-color:midnightblue;
-            margin-left:30%;
-            margin-top:6%;
-        }
-        #reset{
-            background-color:midnightblue;
-            margin-top:6%;
-        }
+        
     </style>
 </head>
 <body>
+<?php
+        if(isset($_POST['title']))
+        {
+            $server="localhost";
+            $user="root";
+            $password="";
+            $db="db";
+
+            try{
+                $conn=mysqli_connect($server,$user,$password,$db);
+                echo "connection successful";
+            }
+            catch(Exception $e)
+            {
+                echo $e;
+            }
+
+            $title=$_POST['title'];
+            $complaint=$_POST['text'];
+
+            
+            $sql="INSERT INTO complain(title,complaint) VALUES ('".$title."',
+            '".$complaint."')";
+            header("location:socMemFileComplaint.php");
+            echo "<script type='text/javascript'>alert('Your complaint has been succesfully registered')</script>";
+            mysqli_query($conn,$sql);
+            echo "Data inserted";
+
+            $conn->close();
+
+        }
+    ?> 
     <?php include("header.php");?>
-     <div id="content">
-     <div id="leftMenu">
-        <table>
-            <tr><td class="listItems" id="dashboard"><a href="socMemDashboard.php">Your Profile</a></td></tr>
-            <tr><td class="listItems" id="complaint"><a href="socMemFileComplaint.php">Register Complaint</a></td></tr>
-            <tr><td class="listItems" id="meetings"><a href="meetings.php">Meetings/Notices</a></td></tr>
-        </table>
-    </div>
+     <?php include("leftMenuSM.php");?>
     <div id="rightMenu">
-        <form action="socMemFileComplaint.html" onsubmit="complaint()">
-            <div id="mess">We are Sorry for the inconvenience!
-                Please mention your complain with <strong>Title</strong>.
-                We would look forward to resolve your problem ASAP if found valid!
-            </div>
-            <div class="fieldTopic"><textArea id="title" rows="1" cols="25" placeholder="Enter title here"></textarea></div>
-            <div class="field" id="problem"><textarea id="text" rows="12" cols="93"></textarea></div>
-            <div id="submitAndLast"><input type="submit" id="submit" value="Submit"><input id="reset" type="reset" value="Clear"></div>
-        </form>
-    </div>
+        <div id="right">
+            <form action="SocMemFileComplaint.php" method="post">
+                <div style="text-align:center; font-size:30px">COMPLAINT FORUM</div>
+                <table>
+                    <tr><td><label style="padding:20px">Title:</label></td>
+                        <td><input type="text" id="title" name="title"></td>
+                    </tr>
+                    <tr>
+                        <td><label style="padding:20px">Date:</label></td>
+                        <td><input type="date" id="date" name="date"></td>
+                    </tr>
+                    <tr>
+                        <td><label style="padding-left:20px">Write Complain here:</label></td>
+                        <td><textarea rows="7" cols="45" id="text" name="text"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td><label style="padding-left:20px">Upload photo:</label></td>
+                        <td><input type="file" id="photo" name="photo"></td>
+                    </tr>
+                    <tr id="last">
+                        <td><input type="submit" id="submit" value="SUBMIT"></td>
+                        <td><input type="reset" id="reset" value="CLEAR"></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
     </div>
     <?php include("footer.php");?>
 </body>

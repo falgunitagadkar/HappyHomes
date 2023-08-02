@@ -11,29 +11,84 @@
         function checkPwd()
         {
             var p1=document.getElementById("createPwd").value;
-            var p2=document.getElementById("cnfPwd").value;
+            var p2=document.getElementById("confirmfPwd").value;
             if(p1!=p2)
             {
                 alert("Your Confirm Password doesn't match with password you entered");
-                var f=document.forms[0];
-                f.setAttribute("action","http://localhost/de/signup.html");
+                console.log(p1p2);
             }
         }
     </script>
 </head>
-<body>    
+<body> 
+    <!-- when new user signup he comes here and using php data is inserted in db  -->
+    <?php
+        if(isset($_POST['username']))
+        {
+            $server="localhost";
+            $user="root";
+            $password="";
+            $db="db";
+
+            try{
+                $conn=mysqli_connect($server,$user,$password,$db);
+            }
+            catch(Exception $e)
+            {
+                echo $e;
+            }
+
+            $uname=$_POST['username'];
+            $contact=$_POST['contactNo'];
+            $email=$_POST['email'];
+            $flat=$_POST['flatNo'];
+            $soc=$_POST['socName'];
+            $pwd=$_POST['createPwd'];
+            $cfpwd=$_POST['confirmPwd'];
+            
+            $sql="SELECT * FROM userlist WHERE uname='$uname' AND contact='$contact'";
+            $result=mysqli_query($conn,$sql);
+            if(mysqli_num_rows($result)!=0)
+            {
+                echo "<script type='text/javascript'>alert('User already registered')</script>";
+            }
+            else
+            {
+                if($pwd==$cfpwd)
+                {
+                    $sql="INSERT INTO userlist(uname,contact,email,flat,soc,pwd,cfpwd) VALUES ('".$uname."',
+                                                        '".$contact."',
+                                                        '".$email."',
+                                                        '".$flat."',
+                                                        '".$soc."',
+                                                        '".$pwd."',
+                                                        '".$cfpwd."')";
+                    header("location:socMemDashboard.php");
+                    mysqli_query($conn,$sql);
+    
+                }
+                else
+                {
+                    echo "<script type='text/javascript'>alert('Confirm Password not matched with password.Sorry!')</script>";
+                }
+            }
+
+            $conn->close();
+
+        }
+    ?>   
     <div id="header" style="background-color:midnightblue; height:60px;">
         <img id="logo" src="assets/logo.png"/>  
         <div id="sms"><a href="index.html" style="padding:1%; font-size:2em">Society Management System</a></div>
         <div id="menu"><ul type="none">
-                        <li><a href="index.html">Home </a></li>&nbsp;&nbsp;
-                        <li><a href="contact.html">Contact </a></li>&nbsp;&nbsp;
-                        <li><a href="about.html">About</a></li>
+                        <li><a href="index.php">Home </a></li>&nbsp;&nbsp;
+                        <li><a href="contact.php">Contact </a></li>&nbsp;&nbsp;
+                        <li><a href="about.php">About</a></li>
         </ul></div>
      </div>
 
     <div id="form">
-        <form action="http://localhost/de/index.php" method="post">
+        <form action="" method="post">
             <h1>Enter your details!</h1>
             <div class="field">
                 <label for="username">Username:</label><input type="text" name="username" id="username">
